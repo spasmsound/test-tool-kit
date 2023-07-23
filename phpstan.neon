@@ -1,0 +1,27 @@
+parameters:
+    level: 6
+
+    excludePaths:
+        - vendor
+
+    checkGenericClassInNonGenericObjectType: false
+
+    paths:
+        - config
+        - src
+#        - tests
+        - public
+
+    symfony:
+        containerXmlPath: var/cache/dev/App_KernelDevDebugContainer.xml
+
+    ignoreErrors:
+#        - '#specified in iterable type array#'
+#        - '#Unable to resolve the template type T in call to method#'
+#        - '#expects class-string<object>#'
+#        - '#Dead catch - Error is never thrown in the try block.#'
+#        - '#Variable method call#'
+#        - '#to IntlDateFormatter constructor#'
+
+rules:
+    - App\PHPStan\ControllerExtendsSymfonyRule
